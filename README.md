@@ -15,7 +15,9 @@
 
 ```
 dsh-docker-build-pwd/
-├── README.md              ← 本文件
+├── README.md              ← 本文件（中文）
+├── README_en.md           ← English version
+├── LICENSE                ← BSD 3-Clause
 ├── .gitignore
 ├── .gitmodules            ← submodule 配置（dsh-passwords）
 ├── restart.sh             ← 一键重建/启动脚本
@@ -138,6 +140,8 @@ git push
 
 ## 许可证
 
-本仓库镜像构建脚本按 MIT 许可证发布。
+本仓库按 **BSD 3-Clause** 许可证发布 —— 详见 [LICENSE](LICENSE)。
+
+英文文档：[README_en.md](README_en.md)。
 
 `dsh-passwords` 子模块遵循其上游许可证（见 `build/dsh-passwords/LICENSE`）。
