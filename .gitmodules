@@ -1,0 +1,3 @@
+[submodule "build/dsh-passwords"]
+	path = build/dsh-passwords
+	url = https://github.com/slywalker2006/dsh-passwords.git

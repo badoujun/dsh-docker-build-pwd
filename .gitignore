@@ -1,0 +1,15 @@
+# dsh-passwords 用 submodule 跟踪
+build/dsh-passwords/
+
+# 运行时挂载数据（容器内产生，绝不入库）
+*.log
+
+# 临时/备份
+*.bak
+*~
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

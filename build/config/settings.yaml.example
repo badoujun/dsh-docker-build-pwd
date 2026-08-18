@@ -1,0 +1,24 @@
+# Custom model provider profile for DeepSeek Harness (optional).
+#
+# When you do NOT use the official DeepSeek API but any OpenAI-compatible
+# endpoint (company gateway, OneAPI, vLLM, ...):
+#
+#   1. cp config/settings.yaml.example config/settings.yaml
+#   2. Edit baseURL / model ids below, and the key env var in .env
+#   3. docker compose up -d --build
+#
+# Notes:
+# - apiKeyEnv names an ENVIRONMENT VARIABLE holding the key (not the key itself);
+#   the container must receive it (docker-compose.yml passes DSH_PROVIDER_API_KEY).
+# - api: openai-completions selects the OpenAI Chat Completions wire protocol.
+# - This file is imported into the dsh state volume on FIRST boot only; later
+#   edits to the live config happen in the Web UI (Settings -> Models) or by
+#   deleting the dsh-home volume and restarting.
+llm-pi-ai:
+  providers:
+    my-gateway:
+      apiKeyEnv: DSH_PROVIDER_API_KEY
+      api: openai-completions
+      baseURL: https://your-gateway.example.com/v1
+      models:
+        - id: your-model-id
